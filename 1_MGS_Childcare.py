@@ -4,7 +4,9 @@ in a roll"""
 
 def dropoff(child_list):
     # Asks for the name of the child
-    child_name = input("Enter the name of your child: ")
+    child_name = input("Enter the name of your child (Input X to cancel): ")
+    if child_name == "x" or child_name == "X":
+        return
 
     # Add the child's name to a list
     child_list.append(child_name)
@@ -19,7 +21,7 @@ def pickup(child_list):
         return
 
     # Asks for the name of the child
-    child_name = input("Enter the name of the child to remove: ")
+    child_name = input("Enter the name of the child to remove (Input X to cancel): ")
 
     try:
         # Removes the child from the list
